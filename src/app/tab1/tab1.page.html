@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Tab Principal </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,5 +11,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <h1 class="hello">Hello World {{name}}</h1>
+  <div>
+    <div class="todoCard" *ngFor="let item of todos ">
+      <h3>{{item.id}}</h3>
+      <p>{{item.title}}</p>
+      <span>{{item.prioridad}}</span>
+    </div>
+  </div>
+  <div>{{todo.title}}</div>
+  <app-explore-container name="Tab principal"></app-explore-container>
 </ion-content>
