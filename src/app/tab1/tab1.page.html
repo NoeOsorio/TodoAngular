@@ -1,24 +1,72 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Tab Principal </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="goals__header">
+    <h1 class="goals__header__title">Goals</h1>
+    <div class="goals__header__menu">
+      <select class="goals__header__menu__select">
+        <option>Recent</option>
+      </select>
+      <ion-button color="warning">Warning</ion-button>
+      <!-- <button class="goals__header__menu__categories">Categories</button> -->
+    </div>
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <h1 class="hello">Hello World {{name}}</h1>
-  <div>
-    <div class="todoCard" *ngFor="let item of todos ">
-      <h3>{{item.id}}</h3>
-      <p>{{item.title}}</p>
-      <span>{{item.prioridad}}</span>
+  <div class="goals__cards">
+    <div class="goals__cards__card">
+      <div class="goals__cards__card__header">
+        <i class="goals__cards__card__header__icon"></i>
+        <h3 class="goals__cards__card__header__title">Work</h3>
+        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
+      </div>
+      <div class="goals__cards__card__actions">
+        <span class="goals__cards__card__actions__id">3 of 4</span>
+        <button class="goals__cards__card__actions__done">Finalizar</button>
+      </div>
+    </div>
+    <div class="goals__cards__card">
+      <div class="goals__cards__card__header">
+        <i class="goals__cards__card__header__icon"></i>
+        <h3 class="goals__cards__card__header__title">Work</h3>
+        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
+      </div>
+      <div class="goals__cards__card__actions">
+        <span class="goals__cards__card__actions__id">3 of 4</span>
+        <button class="goals__cards__card__actions__done">Finalizar</button>
+      </div>
+    </div>
+    <div class="goals__cards__card">
+      <div class="goals__cards__card__header">
+        <i class="goals__cards__card__header__icon"></i>
+        <h3 class="goals__cards__card__header__title">Work</h3>
+        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
+      </div>
+      <div class="goals__cards__card__actions">
+        <span class="goals__cards__card__actions__id">3 of 4</span>
+        <button class="goals__cards__card__actions__done">Finalizar</button>
+      </div>
+    </div>
+    <div class="goals__cards__card">
+      <div class="goals__cards__card__header">
+        <i class="goals__cards__card__header__icon"></i>
+        <h3 class="goals__cards__card__header__title">Work</h3>
+        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
+      </div>
+      <div class="goals__cards__card__actions">
+        <span class="goals__cards__card__actions__id">3 of 4</span>
+        <button class="goals__cards__card__actions__done">Finalizar</button>
+      </div>
+    </div>
+    <div class="goals__cards__card">
+      <div class="goals__cards__card__header">
+        <i class="goals__cards__card__header__icon"></i>
+        <h3 class="goals__cards__card__header__title">Work</h3>
+        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
+      </div>
+      <div class="goals__cards__card__actions">
+        <span class="goals__cards__card__actions__id">3 of 4</span>
+        <button class="goals__cards__card__actions__done">Finalizar</button>
+      </div>
     </div>
   </div>
-  <div>{{todo.title}}</div>
-  <app-explore-container name="Tab principal"></app-explore-container>
 </ion-content>

@@ -1,11 +1,99 @@
-.hello {
-  font-size: 3em;
-  color: red;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,500;1,700&display=swap");
 
-.todoCard {
-  border-radius: 15px;
-  border: 1px solid grey;
-  padding: 1em;
-  margin: 0.5em 1em;
+.goals {
+  font-family: "Roboto", sans-serif;
+  &__header {
+    padding: 1em;
+    margin: 1em;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      &__select {
+        border-color: transparent;
+        color: #9e9e9e;
+      }
+
+      &__categories {
+        border-color: transparent;
+        background-color: transparent;
+        background: none;
+        color: #9e9e9e;
+      }
+    }
+  }
+
+  &__cards {
+    margin: 0.5em;
+    // background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__card {
+      border-radius: 15px;
+      padding: 0.8em;
+      margin: 0.5em;
+      height: 150px;
+      // TODO:Cambiar esto
+      width: clamp(120px, 40%, 300px);
+      // width: 40%;
+
+      background-color: #2196f3;
+      color: white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__icon {
+        }
+        &__title {
+          margin: 0;
+          font-weight: 700;
+          font-size: clamp(30px, 10vw, 50px);
+          // font-family: "Courier New", Courier, monospace;
+        }
+        &__subtitle {
+          font-size: clamp(20px, 4vw, 30px);
+          font-weight: 300;
+          margin: 0;
+        }
+      }
+
+      &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &__id {
+          font-weight: 700;
+        }
+        &__done {
+          background-color: transparent;
+          border-style: solid;
+          border-color: white;
+          border-width: 1px;
+          border-radius: 8px;
+          color: white;
+          padding: 0.3em;
+
+          &:hover {
+            color: #2196f3;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
 }
