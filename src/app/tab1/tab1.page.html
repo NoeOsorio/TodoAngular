@@ -5,7 +5,7 @@
       <select class="goals__header__menu__select">
         <option>Recent</option>
       </select>
-      <ion-button color="warning">Warning</ion-button>
+      <ion-button color="warning" (click)="addTodo()">Add</ion-button>
       <!-- <button class="goals__header__menu__categories">Categories</button> -->
     </div>
   </div>
@@ -13,54 +13,10 @@
 
 <ion-content [fullscreen]="true">
   <div class="goals__cards">
-    <div class="goals__cards__card">
+    <div *ngFor="let item of todos" class="goals__cards__card">
       <div class="goals__cards__card__header">
         <i class="goals__cards__card__header__icon"></i>
-        <h3 class="goals__cards__card__header__title">Work</h3>
-        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
-      </div>
-      <div class="goals__cards__card__actions">
-        <span class="goals__cards__card__actions__id">3 of 4</span>
-        <button class="goals__cards__card__actions__done">Finalizar</button>
-      </div>
-    </div>
-    <div class="goals__cards__card">
-      <div class="goals__cards__card__header">
-        <i class="goals__cards__card__header__icon"></i>
-        <h3 class="goals__cards__card__header__title">Work</h3>
-        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
-      </div>
-      <div class="goals__cards__card__actions">
-        <span class="goals__cards__card__actions__id">3 of 4</span>
-        <button class="goals__cards__card__actions__done">Finalizar</button>
-      </div>
-    </div>
-    <div class="goals__cards__card">
-      <div class="goals__cards__card__header">
-        <i class="goals__cards__card__header__icon"></i>
-        <h3 class="goals__cards__card__header__title">Work</h3>
-        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
-      </div>
-      <div class="goals__cards__card__actions">
-        <span class="goals__cards__card__actions__id">3 of 4</span>
-        <button class="goals__cards__card__actions__done">Finalizar</button>
-      </div>
-    </div>
-    <div class="goals__cards__card">
-      <div class="goals__cards__card__header">
-        <i class="goals__cards__card__header__icon"></i>
-        <h3 class="goals__cards__card__header__title">Work</h3>
-        <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
-      </div>
-      <div class="goals__cards__card__actions">
-        <span class="goals__cards__card__actions__id">3 of 4</span>
-        <button class="goals__cards__card__actions__done">Finalizar</button>
-      </div>
-    </div>
-    <div class="goals__cards__card">
-      <div class="goals__cards__card__header">
-        <i class="goals__cards__card__header__icon"></i>
-        <h3 class="goals__cards__card__header__title">Work</h3>
+        <h3 class="goals__cards__card__header__title">{{item.title}}</h3>
         <h4 class="goals__cards__card__header__subtitle">yesterday</h4>
       </div>
       <div class="goals__cards__card__actions">

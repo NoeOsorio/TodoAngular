@@ -29,4 +29,14 @@ export class Tab1Page implements OnInit {
       this.todos = todos;
     });
   }
+
+  addTodo() {
+    console.log('Add TOdo');
+    this.todoService.createTodo({
+      id: 8,
+      title: 'Comprar sodas',
+      active: true,
+      prioridad: 'baja',
+    });
+  }
 }
